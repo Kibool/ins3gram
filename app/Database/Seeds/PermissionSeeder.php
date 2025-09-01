@@ -8,11 +8,16 @@ class PermissionSeeder extends Seeder
 {
     public function run()
     {
-    $data = [
-       [ 'name'=>'Administrateur',
-        'slug'=>'administrateur',],
-        [  'name'=>'Utilisateur',
-        'slug'=>'utilisateur', ],
-    ];
-    $this->db->table('user_permission')->insertBatch($data);}
+        $data = [
+            [
+                'name' => 'Administrateur',
+                'slug' => 'administrateur',
+            ],
+            [
+                'name' => 'Utilisateur',
+                'slug' => 'utilisateur',
+            ],
+        ];
+        $this->db->table('user_permission')->insertBatch($data);
+    }
 }
